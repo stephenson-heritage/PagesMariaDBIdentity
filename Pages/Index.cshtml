@@ -13,7 +13,11 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-
+@if(@Model.WebUser != null) {
+    <h3>Welcome back, @Model.WebUser.Name</h3>
+} else {
+    <h3>Welcome Friend!</h3>
+}
 <table>
     <thead>
         <tr>
